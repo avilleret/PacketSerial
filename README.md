@@ -49,7 +49,7 @@ Another coding available in PacketSerial is [Serial Line Internet Protocol](http
 
 ## PacketSerial
 
-The `PacketSerial` class wraps the standard Arduino `Serial` class to automatically encode and decode byte packets automatically.  Thus users can still call methods on the `Serial` object (e.g. `Serial.write()`, the built in `serialEvent()` callback etc), but it is not recommended.  Users are advised to let PacketSerial manage all Serial communication via the packet handler callback for incoming packets and the `send(const uint8_t* buffer, size_t size)` method for outgoing packets.  Mixing raw Serial calls with PacketSerial may lead to unexpected results, as the endpoint will not know what data is encoded and what data is not.
+The `PacketSerial` class wraps the standard Arduino `Serial` class to automatically encode and decode byte packets.  Thus users can still call methods on the `Serial` object (e.g. `Serial.write()`, the built in `serialEvent()` callback etc), but it is not recommended.  Users are advised to let PacketSerial manage all Serial communication via the packet handler callback for incoming packets and the `send(const uint8_t* buffer, size_t size)` method for outgoing packets.  Mixing raw Serial calls with PacketSerial may lead to unexpected results, as the endpoint will not know what data is encoded and what data is not.
 
 
 ## Setup 
